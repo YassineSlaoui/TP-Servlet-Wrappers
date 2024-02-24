@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <display-name>Welcome tomcat</display-name>
+    <welcome-file-list>
+        <welcome-file>Webpage1.jsp</welcome-file>
+    </welcome-file-list>
+    <description>
+        Welcome tomcat
+    </description>
+    <filter>
+        <filter-name>Filter</filter-name>
+        <filter-class>com.yassineslaoui.tpservletwrappers.servlets.MyFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Filter</filter-name>
+        <url-pattern>/MyServ</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>Servlet</servlet-name>
+        <servlet-class>com.yassineslaoui.tpservletwrappers.servlets.MyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Servlet</servlet-name>
+        <url-pattern>/MyServ</url-pattern>
+    </servlet-mapping>
+</web-app>
